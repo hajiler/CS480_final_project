@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../static/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+    <form action="/login" method="post" enctype="multipart/form-data">
+        <input  name="username" id="username" type="text" style="display: block;">
+        <input  name="password" id="password" type="password">
+        <select name="role" id="role">
+            <option value="Administrator">Administrator</option>
+            <option value="Nurse">Nurse</option>
+            <option value="Patient">Patient</option>
+        </select>
+        <input type="submit" value="Login">
+    </form>
+    <br>
+    <br>
+    <!--Register patient form-->
+    <form id="form_patient_Register" action="/register?type=patient" method="POST" enctype="multipart/form-data">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail">Username</label>
+                <input type="text" class="form-control" id="inputUsername" name="inputUsername" placeholder="username">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword">Password</label>
+                <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputFName">First Name</label>
+                <input type="text" class="form-control" id="inputFName" name="inputFName" placeholder="John">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputFName">Middle Name</label>
+                <input type="text" class="form-control" id="inputMI" name="inputMI">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputLName">Last Name</label>
+                <input type="text" class="form-control" id="inputLName" name="inputLName" placeholder="Doe">
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="inputSSN">SSN</label>
+            <input type="text" class="form-control" id="inputSSN" name="inputSSN" placeholder="123-45-6789">
+        </div>
+        <div class="form-row">
+            <label for="inputAddress">Address</label>
+            <input type="text" class="form-control" id="inputAddress" name="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-row">
+            <label for="inputPhone">Phone Number</label>
+            <input type="text" class="form-control" id="inputPhone" name="inputPhone" placeholder="773-999-9999">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputGender">Gender</label>
+                <select id="inputGender" name="inputGender" class="form-control">
+                    <option >Non-binary</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputRace">Race</label>
+                <select id="inputRace" name="inputRace" class="form-control">
+                    <option >Latinx</option>
+                    <option>Black</option>
+                    <option>Asian</option>
+                    <option>White</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputAge">Age</label>
+                <input type="number" class="form-control" id="inputAge" name="inputAge" class="form-control"/>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputJob">Occupation</label>
+                <input type="text" class="form-control" id="inputJob" name="inputJob" class="form-control"/>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputAge">Medical History</label>
+                <input type="text" class="form-control" id="inputHistory" name="inputHistory" class="form-control"/>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Sign up</button>
+    </form>
+</body>
+</html>
